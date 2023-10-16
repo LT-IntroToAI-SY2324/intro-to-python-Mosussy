@@ -5,7 +5,7 @@
 # types
 
 # str
-y = "I love Computer Science!"
+my str = "I love Computer Science!"
 
 # numbers
 mynum = 47
@@ -14,7 +14,7 @@ print(type(mynum))
 print(type(anothernum))
 
 # bools - True, False
-flag = True
+flag bool = True
 print(flag)
 
 # lists - can hold a list of items of any type
@@ -98,4 +98,30 @@ age = 25
 # print("Mary is " + age + " years old")
 print(f"Mary is {age} years old")
 
+
+#Moses Personal Notes#
+if age >= 18:
+    print("You are and adult")
+elif age >= 13:
+    print("you are a teenager")
+else:
+    print("You are a child")
+
+
+for i in range(5):
+    print(i)
+
+while x > 0;
+    print(x)
+    x-=1
+#
+integers = int
+floating-point numbers = float
+string = str
+boolean = bool
+list = []
+tuples = ()
+dictionaries = dict {}
+sets = {} or set()
+NoneType = None
 

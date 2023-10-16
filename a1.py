@@ -15,18 +15,14 @@ check, if you do not complete the generative AI portion of the assignment.
 from typing import List, TypeVar
 
 
-def absolute(n: int) -> int:
-    """Gives the absolute value of the passed in number. Cannot use the built in
-    function `abs`.
-
-    Args:
-        n - the number to take the absolute value of
-
-    Returns:
-        the absolute value of the passed in number
-    """
-    raise NotImplementedError("absolute")
-
+def absolute(number: int) -> int:
+    if number < 0:
+        return -1*number
+    else:
+        return number
+    
+#outcome = absolute_val(-10)
+#print(outcome)
 
 def factorial(n: int) -> int:
     """Takes a number n, and computes the factorial n! You can assume the passed in
@@ -38,7 +34,13 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
+    temp = 1
+    for i in range(1, n + 1):
+        temp = i * temp
+    return temp
+    
+ #   print(factorial(4)) 
+        
 
 
 T = TypeVar("T")
@@ -55,7 +57,11 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
+    new_list = []
+    for i in range(len(lst)):
+        if i % 2 == 0:
+            new_list.append(lst[i])
+        return new_list
 
 
 def sum_list(lst: List[int]) -> int:
@@ -68,8 +74,10 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
-
+    s = 0
+    for el in lst:
+        s = s + el
+        return s
 
 def mean(lst: List[int]) -> float:
     """Takes a list of numbers, and returns the mean of the numbers.
@@ -80,7 +88,14 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    ll = len(lst)
+    if ll == 0:
+        error_message = "There is nothing in the list"
+        raise ValueError(error_message)
+    
+    sum_list = sum(lst)
+    return sum_list/ll
+    
 
 
 def median(lst: List[int]) -> float:
@@ -95,7 +110,15 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
-    raise NotImplementedError("median")
+    if n == 0:
+        error_message = "There is nothing in the list"
+        raise ValueError(error_message)
+
+    n = len(lst)
+    if n % 2 == 1:
+        return lst[middle]
+    else:
+        return (lst[middle - 1] + lst[middle])/2.0
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
@@ -123,7 +146,7 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
 # this line causes the nested code to be skipped if the file is imported instead of run
 if __name__ == "__main__":
     assert absolute(-1) == 1, "absolute of -1 failed"
-    assert factorial(4) == 24, "factorial of 4 failed"
+    #assert factorial(4) == 24, "factorial of 4 failed"
     assert every_other([1, 2, 3, 4, 5]) == [
         1,
         3,

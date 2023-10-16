@@ -13,11 +13,12 @@ Mr. Berg will look at all your files to determine what you have completed.  If t
 ## Reflection Questions
 
 1. What is your initial thoughts about the python programming language?
-
+It feels really weird to use. I'm use to java/javascript
 
 
 2. Describe some similarities and differences that you found between python and other programming languages you have used in the past?
-
+I mean they're really similar in concets like for loops and while loops, it's just the difference in syntax like I'm use to declaring what type of variable it is rather than python where you just name it and it does it for you. 
 
 
 3. What are some things that you learned through this assignment?
+I learned to understand the benefits of pyhon since it seems i seems the syntax is easier to write, but to me it's harder to read. I feel like I still strugggle with the python language bu like I'll eventually get used to it. 
